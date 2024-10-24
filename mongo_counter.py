@@ -53,5 +53,4 @@ class EvaluationCounter:
 @st.cache_resource
 def init_counter():
     """Initialize evaluation counter (runs once)"""
-    connection_string = "mongodb+srv://mohamedbadrelmaarif:7HDkDvw5z4j55FlK@cluster0.3i6pz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"  # Replace with your connection string
-    return EvaluationCounter(connection_string)
+    return EvaluationCounter(st.secrets["connection_string"])

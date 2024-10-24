@@ -55,7 +55,7 @@ if total_evaluations is not None:
     st.markdown(f"### Total Number of Essays Evaluated: <span style='color: red'>{total_evaluations}</span>", unsafe_allow_html=True)
 
 # Set up Groq LLM
-llm = ChatGroq(api_key=os.getenv("GROQ_API_KEY"), model_name="llama-3.1-70b-versatile", temperature=0)
+llm = ChatGroq(api_key=st.secrets["GROQ_API_KEY"], model_name="llama-3.1-70b-versatile", temperature=0)
 
 # Define output structure for formatting chain
 class FormattedEvaluation(BaseModel):
